@@ -37,6 +37,8 @@ services:
       - "3000:3000"
     volumes:
       - ./client:/usr/app
+    stdin_open: true
+    tty: true
 volumes:
   db:
     driver: local
