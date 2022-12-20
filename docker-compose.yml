@@ -30,7 +30,13 @@ services:
     links:
       - db
     volumes:
-      - './:/src'
+      - './server:/src'
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/usr/app
 volumes:
   db:
     driver: local
