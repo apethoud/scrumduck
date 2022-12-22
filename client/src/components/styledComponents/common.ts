@@ -11,3 +11,15 @@ export const SiteHeader = styled.div`
   border-top: 4px solid ${colors.brandPurple};
   background: ${colors.white};
 `
+
+export const NavItem = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+`
+
+export const SiteLogo = styled.div`
+  font-family: "Calistoga", serif;
+  color: ${colors.brandPurple};
+`
