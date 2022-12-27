@@ -1,7 +1,12 @@
+import { PatternBackground, PrimaryBox, SecondaryHeader, Text } from "./styledComponents/common";
+
 export default function Login() {
   return (
-    <>
-      <div>Login</div>
-    </>
+    <PatternBackground>
+      <PrimaryBox>
+        <SecondaryHeader>Login</SecondaryHeader>
+        
+      </PrimaryBox>
+    </PatternBackground>
   )
 }

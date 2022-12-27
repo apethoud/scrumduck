@@ -1,12 +1,12 @@
 const colors = {
-  white: "#fff",
-  gray1: "#ddd",
-  gray2: "#bbb",
-  gray3: "#999",
-  gray4: "#666",
-  gray5: "#333",
   black: "#000",
-  brandPurple: "#6D429B"
+  brandPurple: "#6D429B",
+  gray90: "#333",
+  gray70: "#666",
+  gray50: "#999",
+  gray30: "#bbb",
+  gray10: "#ddd",
+  white: "#fff",
 }
 
 export default colors;
