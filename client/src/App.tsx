@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import SiteHeader from './components/SiteHeader';
 import MarketingPage from './components/MarketingPage';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<SiteHeader />}>
           <Route index element={<MarketingPage />} />
+          <Route path="login" element={<Login />} />
         </Route>
       </Routes>
     </BrowserRouter>
