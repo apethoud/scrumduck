@@ -1,13 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import UserList from './components/UserList';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom';
+import SiteHeader from './components/SiteHeader';
+import MarketingPage from './components/MarketingPage';
 
 function App() {
   return (
-    <div className="App">
-      <UserList />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SiteHeader />}>
+          <Route index element={<MarketingPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
