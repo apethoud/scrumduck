@@ -9,8 +9,8 @@ export const AppBackground = styled.div`
 
 export const PatternBackground = styled.div`
   height: 100vh;
-  background-color: #f5ebff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='24' viewBox='0 0 88 24'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='autumn' fill='%236d429b' fill-opacity='0.4'%3E%3Cpath d='M10 0l30 15 2 1V2.18A10 10 0 0 0 41.76 0H39.7a8 8 0 0 1 .3 2.18v10.58L14.47 0H10zm31.76 24a10 10 0 0 0-5.29-6.76L4 1 2 0v13.82a10 10 0 0 0 5.53 8.94L10 24h4.47l-6.05-3.02A8 8 0 0 1 4 13.82V3.24l31.58 15.78A8 8 0 0 1 39.7 24h2.06zM78 24l2.47-1.24A10 10 0 0 0 86 13.82V0l-2 1-32.47 16.24A10 10 0 0 0 46.24 24h2.06a8 8 0 0 1 4.12-4.98L84 3.24v10.58a8 8 0 0 1-4.42 7.16L73.53 24H78zm0-24L48 15l-2 1V2.18A10 10 0 0 1 46.24 0h2.06a8 8 0 0 0-.3 2.18v10.58L73.53 0H78z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-color: #f8f2ff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='24' viewBox='0 0 88 24'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='autumn' fill='%23bca6d3' fill-opacity='0.4'%3E%3Cpath d='M10 0l30 15 2 1V2.18A10 10 0 0 0 41.76 0H39.7a8 8 0 0 1 .3 2.18v10.58L14.47 0H10zm31.76 24a10 10 0 0 0-5.29-6.76L4 1 2 0v13.82a10 10 0 0 0 5.53 8.94L10 24h4.47l-6.05-3.02A8 8 0 0 1 4 13.82V3.24l31.58 15.78A8 8 0 0 1 39.7 24h2.06zM78 24l2.47-1.24A10 10 0 0 0 86 13.82V0l-2 1-32.47 16.24A10 10 0 0 0 46.24 24h2.06a8 8 0 0 1 4.12-4.98L84 3.24v10.58a8 8 0 0 1-4.42 7.16L73.53 24H78zm0-24L48 15l-2 1V2.18A10 10 0 0 1 46.24 0h2.06a8 8 0 0 0-.3 2.18v10.58L73.53 0H78z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 `
 
 // Site Header
@@ -43,6 +43,7 @@ export const Box = styled.div`
   border-radius: 12px;
   background: ${colors.white};
   display: flex;
+  flex-direction: column;
   justify-content: center;
 `
 
@@ -60,10 +61,27 @@ export const Text = styled.div`
 export const PrimaryHeader = styled(Text)`
   font-size: 36px;
   font-family: "Calistoga", serif;
-  color: ${colors.black}
+  color: ${colors.black};
 `
 
 export const SecondaryHeader = styled(Text)`
   font-size: 24px;
-  color: ${colors.black}
+  color: ${colors.black};
 `
+
+// Form Elements
+
+export const Label = styled.label`
+  margin: 16px 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+`
+
+export const Input = styled.input`
+  padding: 8px;
+  border: 1px solid ${colors.purple50};
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Assistant", sans-serif;
+`
+
