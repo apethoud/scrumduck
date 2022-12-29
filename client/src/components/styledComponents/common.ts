@@ -85,3 +85,23 @@ export const Input = styled.input`
   font-family: "Assistant", sans-serif;
 `
 
+export const Button = styled.button`
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Assistant", sans-serif;
+  ${({ primary }) => primary 
+    ? `
+      background: ${colors.brandPurple};
+      color: ${colors.white};
+      border: 1px solid ${colors.brandPurple};
+      ` 
+    : `
+      background: ${colors.white};
+      color: ${colors.brandPurple};
+      border: 1px solid ${colors.brandPurple};
+      `
+  };
+`
+
