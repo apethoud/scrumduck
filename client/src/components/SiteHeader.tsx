@@ -2,19 +2,20 @@ import {
   AppBackground,
   SiteHeader as StyledSiteHeader,
   SiteLogo,
-  NavItem
+  NavItem,
+  Text
 } from "./styledComponents/common";
-import { Outlet } from "react-router";
+import { Outlet } from "react-router-dom";
 
 export default function SiteHeader() {
   return (
     <AppBackground>
       <StyledSiteHeader>
-        <NavItem>
+        <NavItem to="/">
           <SiteLogo>Scrumduck</SiteLogo>
         </NavItem>
-        <NavItem>
-          <div>Login</div>
+        <NavItem to="login">
+          <Text>Login</Text>
         </NavItem>
       </StyledSiteHeader>
       <Outlet />
