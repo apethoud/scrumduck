@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import colors from '../../styling/colors';
+import { NavLink } from 'react-router-dom';
 
 // Backgrounds
 
@@ -23,11 +24,12 @@ export const SiteHeader = styled.div`
   border-bottom: 1px solid ${colors.gray10};
 `
 
-export const NavItem = styled.div`
+export const NavItem = styled(NavLink)`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 18px;
+  text-decoration: none;
 `
 
 export const SiteLogo = styled.div`
