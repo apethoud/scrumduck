@@ -40,8 +40,8 @@ export const SiteLogo = styled.div`
 // Boxes
 
 export const Box = styled.div`
-  margin: 12px;
-  padding: 12px;
+  margin: 24px;
+  padding: 24px;
   border-radius: 12px;
   background: ${colors.white};
   display: flex;
@@ -74,9 +74,10 @@ export const SecondaryHeader = styled(Text)`
 // Form Elements
 
 export const Label = styled.label`
-  margin: 16px 0 8px;
+  margin: 16px 0 8px 8px;
   font-size: 16px;
   font-weight: 700;
+  text-transform: capitalize;
 `
 
 export const Input = styled.input`
