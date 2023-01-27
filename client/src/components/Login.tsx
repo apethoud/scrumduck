@@ -1,5 +1,5 @@
 import TextInput from "./common/TextInput";
-import { Button, PatternBackground, PrimaryBox, SecondaryHeader } from "./styledComponents/common";
+import { Button, Link, PatternBackground, PrimaryBox, SecondaryHeader } from "./styledComponents/common";
 import { useFormik } from "formik";
 import * as Yup from 'yup';
 
@@ -46,9 +46,12 @@ export default function Login() {
             onBlur={formik.handleBlur}
             errors={formik.touched.password && formik.errors.password ? formik.errors.password : null}
           />
-          <Button primary type="submit" style={{ marginTop: 16 }}>
+          <Button primary type="submit" style={{ marginTop: 24 }}>
             Login
           </Button>
+          <Link style={{ textAlign: "center", marginTop: 16 }}>
+            Forgot Password?
+          </Link>
         </PrimaryBox>
       </PatternBackground>
     </form>

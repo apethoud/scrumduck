@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import colors from '../../styling/colors';
-import { NavLink } from 'react-router-dom';
+import { Link as BasicLink, NavLink } from 'react-router-dom';
 
 // Backgrounds
 
@@ -69,6 +69,13 @@ export const PrimaryHeader = styled(Text)`
 export const SecondaryHeader = styled(Text)`
   font-size: 24px;
   color: ${colors.black};
+`
+
+export const Link = styled(BasicLink)`
+  font-size: 16px;
+  font-weight: 700;
+  color: ${colors.brandPurple};
+  text-decoration: none;
 `
 
 // Form Elements
