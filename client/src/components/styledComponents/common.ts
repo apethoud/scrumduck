@@ -6,6 +6,7 @@ import { Link as BasicLink, NavLink } from 'react-router-dom';
 
 export const AppBackground = styled.div`
   background: ${colors.white};
+  padding: 16px;
 `
 
 export const PatternBackground = styled.div`
@@ -28,7 +29,7 @@ export const NavItem = styled(NavLink)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 18px;
+  padding: 16px;
   text-decoration: none;
 `
 
