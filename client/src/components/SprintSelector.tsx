@@ -1,5 +1,7 @@
-export default function SprintSelector() {
+import { SecondaryHeader } from "./styledComponents/common";
+
+export default function SprintSelector({ selectedSprintName }) {
   return (
-    <div>Sprint Selector</div>
+    <SecondaryHeader>Sprint { selectedSprintName }</SecondaryHeader>
   )
 }
