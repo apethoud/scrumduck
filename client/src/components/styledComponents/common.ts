@@ -61,6 +61,15 @@ export const Text = styled.div`
   color: ${colors.gray90};
 `
 
+export const BoldText = styled(Text)`
+  font-weight: 700;
+`
+
+export const SubText = styled.div`
+  font-size: 16px;
+  color: ${colors.gray70};
+`
+
 export const PrimaryHeader = styled(Text)`
   font-size: 36px;
   font-family: "Calistoga", serif;
@@ -114,5 +123,20 @@ export const Button = styled.button`
       border: 1px solid ${colors.brandPurple};
       `
   };
+`
+
+// Unique Elements
+
+export const StatusBadge = styled.div`
+  padding: 6px 10px 8px 10px;
+  border-radius: 8px;
+  background-color: ${colors.green};
+  font-size: 14px;
+  font-weight: 700;
+  color: ${colors.white};
+`
+
+export const StatusDate = styled(SubText)`
+  padding: 6px 10px 8px 10px;
 `
 

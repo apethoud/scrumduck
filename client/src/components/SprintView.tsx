@@ -6,7 +6,7 @@ export default function SprintView() {
   return (
     <>
       <SprintSelector selectedSprintName={ExampleData.name} />
-      <StoryList />
+      <StoryList stories={ExampleData.userStories} />
     </>
   )
 }
