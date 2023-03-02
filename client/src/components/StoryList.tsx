@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import colors from '../styling/colors';
 import { BoldText, StatusBadge, StatusDate, SubText } from './styledComponents/common';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+
+dayjs.extend(relativeTime);
 
 const Flex = styled.div`
   display: flex;
@@ -31,7 +35,7 @@ function StatusRow({ status, statusDate }) {
   return (
     <Flex>
       <StatusBadge>{status}</StatusBadge>
-      <StatusDate>{statusDate}</StatusDate>
+      <StatusDate>for {dayjs(statusDate).fromNow(true)}</StatusDate>
     </Flex>
   )
 }
