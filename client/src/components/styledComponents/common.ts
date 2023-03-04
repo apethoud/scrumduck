@@ -65,20 +65,16 @@ export const BoldText = styled(Text)`
   font-weight: 700;
 `
 
-export const SubText = styled.div`
-  font-size: 16px;
+export const SubText = styled(Text)`
   color: ${colors.gray70};
 `
 
 export const PrimaryHeader = styled(Text)`
-  font-size: 36px;
-  font-family: "Calistoga", serif;
-  color: ${colors.black};
+  font-size: 24px;
 `
 
-export const SecondaryHeader = styled(Text)`
-  font-size: 24px;
-  color: ${colors.black};
+export const SecondaryHeader = styled(BoldText)`
+  font-size: 18px;
 `
 
 export const Link = styled(BasicLink)`
@@ -131,7 +127,7 @@ export const StatusBadge = styled.div`
   padding: 6px 10px 8px 10px;
   border-radius: 8px;
   background-color: ${colors.green};
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: ${colors.white};
 `

@@ -1,5 +1,5 @@
 import TextInput from "./common/TextInput";
-import { Button, Link, PatternBackground, PrimaryBox, SecondaryHeader } from "./styledComponents/common";
+import { Button, Link, PatternBackground, PrimaryBox, PrimaryHeader } from "./styledComponents/common";
 import { useFormik } from "formik";
 import * as Yup from 'yup';
 
@@ -27,9 +27,9 @@ export default function Login() {
     <form onSubmit={formik.handleSubmit}>
       <PatternBackground>
         <PrimaryBox>
-          <SecondaryHeader style={{ textAlign: "center" }}>
+          <PrimaryHeader style={{ textAlign: "center" }}>
             Login
-          </SecondaryHeader>
+          </PrimaryHeader>
           <TextInput
             name="email"
             type="text"
