@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import colors from '../styling/colors';
-import { BoldText, StatusBadge, StatusDate, SubText } from './styledComponents/common';
+import { BoldText, SecondaryHeader, StatusBadge, StatusDate, SubText } from './styledComponents/common';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 
@@ -43,7 +43,7 @@ function StatusRow({ status, statusDate }) {
 function TitleRow({ title, issueNumber }) {
   return (
     <Flex style={{ paddingBottom: 8 }}>
-      <BoldText>{title}</BoldText>
+      <SecondaryHeader>{title}</SecondaryHeader>
       <SubText style={{ marginLeft: 8 }}>#{issueNumber}</SubText>
     </Flex>
   )
