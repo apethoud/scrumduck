@@ -70,7 +70,7 @@ export const SubText = styled(Text)`
 `
 
 export const PrimaryHeader = styled(Text)`
-  font-size: 24px;
+  font-size: 28px;
 `
 
 export const SecondaryHeader = styled(BoldText)`
