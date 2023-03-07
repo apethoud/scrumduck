@@ -1,5 +1,5 @@
-import { PatternBackground, PrimaryHeader } from "./styledComponents/common";
-import { TextBox } from "./styledComponents/marketingPage";
+import { PatternBackground } from "./styledComponents/common";
+import { PrimaryHeader, TextBox } from "./styledComponents/marketingPage";
 
 export default function MarketingPage() {
   return (

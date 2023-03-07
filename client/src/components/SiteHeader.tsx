@@ -1,5 +1,4 @@
 import { 
-  AppBackground,
   SiteHeader as StyledSiteHeader,
   SiteLogo,
   NavItem,
@@ -9,7 +8,7 @@ import { Outlet } from "react-router-dom";
 
 export default function SiteHeader() {
   return (
-    <AppBackground>
+    <>
       <StyledSiteHeader>
         <NavItem to="/">
           <SiteLogo>Scrumduck</SiteLogo>
@@ -19,6 +18,6 @@ export default function SiteHeader() {
         </NavItem>
       </StyledSiteHeader>
       <Outlet />
-    </AppBackground>
+    </>
   )
 }

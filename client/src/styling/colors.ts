@@ -6,6 +6,8 @@ const colors = {
   gray50: "#999",
   gray30: "#bbb",
   gray10: "#ddd",
+  greenLight: "#A4E4A2",
+  greenDark: "#1C301B",
   purple50: "#a181c4",
   white: "#fff",
 }

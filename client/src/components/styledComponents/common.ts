@@ -6,6 +6,7 @@ import { Link as BasicLink, NavLink } from 'react-router-dom';
 
 export const AppBackground = styled.div`
   background: ${colors.white};
+  padding: 16px;
 `
 
 export const PatternBackground = styled.div`
@@ -28,7 +29,7 @@ export const NavItem = styled(NavLink)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 18px;
+  padding: 16px;
   text-decoration: none;
 `
 
@@ -60,15 +61,20 @@ export const Text = styled.div`
   color: ${colors.gray90};
 `
 
-export const PrimaryHeader = styled(Text)`
-  font-size: 36px;
-  font-family: "Calistoga", serif;
-  color: ${colors.black};
+export const BoldText = styled(Text)`
+  font-weight: 700;
 `
 
-export const SecondaryHeader = styled(Text)`
-  font-size: 24px;
-  color: ${colors.black};
+export const SubText = styled(Text)`
+  color: ${colors.gray70};
+`
+
+export const PrimaryHeader = styled(Text)`
+  font-size: 28px;
+`
+
+export const SecondaryHeader = styled(BoldText)`
+  font-size: 20px;
 `
 
 export const Link = styled(BasicLink)`
@@ -113,5 +119,20 @@ export const Button = styled.button`
       border: 1px solid ${colors.brandPurple};
       `
   };
+`
+
+// Unique Elements
+
+export const StatusBadge = styled.div`
+  padding: 6px 10px 8px 10px;
+  border-radius: 8px;
+  background-color: ${colors.greenLight};
+  font-size: 16px;
+  font-weight: 700;
+  color: ${colors.greenDark};
+`
+
+export const StatusDate = styled(SubText)`
+  padding: 6px 10px 8px 10px;
 `
 
