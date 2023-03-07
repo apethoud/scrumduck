@@ -74,7 +74,7 @@ export const PrimaryHeader = styled(Text)`
 `
 
 export const SecondaryHeader = styled(BoldText)`
-  font-size: 18px;
+  font-size: 20px;
 `
 
 export const Link = styled(BasicLink)`
@@ -126,10 +126,10 @@ export const Button = styled.button`
 export const StatusBadge = styled.div`
   padding: 6px 10px 8px 10px;
   border-radius: 8px;
-  background-color: ${colors.green};
+  background-color: ${colors.greenLight};
   font-size: 16px;
   font-weight: 700;
-  color: ${colors.white};
+  color: ${colors.greenDark};
 `
 
 export const StatusDate = styled(SubText)`

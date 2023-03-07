@@ -52,7 +52,7 @@ function TitleRow({ title, issueNumber }) {
   return (
     <Flex style={{ paddingBottom: 8 }}>
       <SecondaryHeader>{title}</SecondaryHeader>
-      <SubText style={{ marginTop: 2, marginLeft: 8 }}>#{issueNumber}</SubText>
+      <SubText style={{ marginTop: 3, marginLeft: 8 }}>#{issueNumber}</SubText>
     </Flex>
   )
 }
