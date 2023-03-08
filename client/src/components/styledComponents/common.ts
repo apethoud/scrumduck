@@ -2,6 +2,12 @@ import styled from 'styled-components';
 import colors from '../../styling/colors';
 import { Link as BasicLink, NavLink } from 'react-router-dom';
 
+// Utilities
+
+export const Flex = styled.div`
+display: flex;
+`
+
 // Backgrounds
 
 export const AppBackground = styled.div`

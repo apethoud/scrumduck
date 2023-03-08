@@ -3,6 +3,7 @@ import ExampleData from "../api/api";
 import { useEffect, useState } from "react";
 import PageSection from "./common/PageSection";
 import { Link, SecondaryHeader, Text } from "./styledComponents/common";
+import StatusRow from "./StatusRow";
 
 export default function StoryView() {
   const [ story, setStory ] = useState(null);
@@ -23,6 +24,9 @@ export default function StoryView() {
             <SecondaryHeader style={{ marginBottom: 4 }}>{story.title}</SecondaryHeader>
             <Text style={{ marginBottom: 4 }}>{story.storyText}</Text>
             <Link>View on Github</Link>
+          </PageSection>
+          <PageSection title="Current Status">
+            <StatusRow status={story.status} statusDate={story.statusLastUpdated} />
           </PageSection>
         </>
       ) : (
