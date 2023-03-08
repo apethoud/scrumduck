@@ -1,6 +1,6 @@
 const exampleSprintData = {
   id: 1,
-  name: "12",
+  name: "1",
   projectId: 1,
   userStories: [
     {

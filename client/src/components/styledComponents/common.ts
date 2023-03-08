@@ -77,6 +77,14 @@ export const SecondaryHeader = styled(BoldText)`
   font-size: 20px;
 `
 
+export const SectionTitle = styled.div`
+  font-size: 14px;
+  font-weight: 700;
+  color: ${colors.brandPurple};
+  text-transform: uppercase;
+  letter-spacing: 2px;
+`
+
 export const Link = styled(BasicLink)`
   font-size: 16px;
   font-weight: 700;
