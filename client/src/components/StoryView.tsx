@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import PageSection from "./common/PageSection";
 import { Link, SecondaryHeader, Text } from "./styledComponents/common";
 import StatusRow from "./StatusRow";
+import StoryTimeline from "./StoryTimeline";
 
 export default function StoryView() {
   const [ story, setStory ] = useState(null);
@@ -27,6 +28,9 @@ export default function StoryView() {
           </PageSection>
           <PageSection title="Current Status">
             <StatusRow status={story.status} statusDate={story.statusLastUpdated} />
+          </PageSection>
+          <PageSection title="Timeline">
+            <StoryTimeline story={story} />
           </PageSection>
         </>
       ) : (
