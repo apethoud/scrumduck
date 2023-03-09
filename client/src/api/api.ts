@@ -16,7 +16,10 @@ const exampleSprintData = {
           date: "2023-03-06T11:55:20",
           event: {
             type: "status_change",
-            data: "sprint_ready"
+            data: {
+              new_status: "Sprint Ready",
+              old_status: null
+            }
           }
         },
         {
@@ -24,7 +27,9 @@ const exampleSprintData = {
           date: "2023-03-09T11:55:20",
           event: {
             type: "comment",
-            data: "This is now a top priority."
+            data: {
+              comment: "Considering the updated project deadline, this is now a top priority."
+            }
           }
         },
         {
@@ -32,7 +37,9 @@ const exampleSprintData = {
           date: "2023-03-10T14:55:20",
           event: {
             type: "blocking_comment",
-            data: "Need design updates."
+            data: {
+              comment: "Need design updates."
+            }
           }
         },
         {
@@ -40,7 +47,9 @@ const exampleSprintData = {
           date: "2023-03-12T11:55:20",
           event: {
             type: "unblocking_comment",
-            data: "Designs are ready."
+            data: {
+              comment: "Designs are ready."
+            }
           }
         },
         {
@@ -48,7 +57,21 @@ const exampleSprintData = {
           date: "2023-03-12T15:55:20",
           event: {
             type: "status_change",
-            data: "in_development"
+            data: {
+              new_status: "In Development",
+              old_status: "Sprint Ready"
+            }
+          }
+        },
+        {
+          id: 6,
+          date: "2023-03-14T15:55:20",
+          event: {
+            type: "status_change",
+            data: {
+              new_status: "Done",
+              old_status: "In Development"
+            }
           }
         },
       ],
