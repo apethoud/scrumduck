@@ -2,33 +2,25 @@ import { BoldText, Flex, SubText, Text } from "./styledComponents/common"
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
-import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
-  faCircleArrowRight, 
-  faCircleCheck, 
-  faCircleXmark, 
-  faCommentDots, 
-  faRocket, 
-  faSkull, 
-  faSun, 
-} from '@fortawesome/free-solid-svg-icons'
+  ArrowRightCircleIcon,
+  ChatBubbleOvalLeftEllipsisIcon, 
+  CheckCircleIcon, 
+  RocketLaunchIcon, 
+  SunIcon, 
+  XCircleIcon 
+} from "@heroicons/react/24/outline";
+import colors from "../styling/colors";
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
 
-function TimelineIcon({ icon }) {
-  return (
-    <div style={{ marginRight: 8 }}>
-      <FontAwesomeIcon icon={icon} size="lg" />
-    </div>
-  )
-}
-
 function Comment({ data }) {
   return (
     <Flex>
-      <TimelineIcon icon={faCommentDots} />
+      <div style={{ width: 36, marginRight: 8, color: colors.brandPurple }}>
+        <ChatBubbleOvalLeftEllipsisIcon />
+      </div>
       <Text>"{data.comment}"</Text>
     </Flex>
   )
@@ -37,7 +29,9 @@ function Comment({ data }) {
 function BlockingComment({ data }) {
   return (
     <Flex>
-      <TimelineIcon icon={faCircleXmark} />
+      <div style={{ width: 24, marginRight: 8, color: colors.brandPurple }}>
+        <XCircleIcon />
+      </div>
       <BoldText>Blocked:&nbsp;</BoldText>
       <Text>"{data.comment}"</Text>
     </Flex>
@@ -47,7 +41,9 @@ function BlockingComment({ data }) {
 function UnblockingComment({ data }) {
   return (
     <Flex>
-      <TimelineIcon icon={faCircleCheck} />
+      <div style={{ width: 24, marginRight: 8, color: colors.brandPurple }}>
+        <CheckCircleIcon />
+      </div>
       <BoldText>Resolved:&nbsp;</BoldText>
       <Text>"{data.comment}"</Text>
     </Flex>
@@ -59,14 +55,24 @@ function StatusChange({ data }) {
     <>
       {data.old_status !== null ? (
         <Flex>
-          <TimelineIcon icon={data.new_status === "Done" ? faRocket : faCircleArrowRight} />
+          {data.new_status === "Done" ? (
+            <div style={{ width: 24, marginRight: 8, color: colors.brandPurple }}>
+              <RocketLaunchIcon />
+            </div>
+          ) : (
+            <div style={{ width: 24, marginRight: 8, color: colors.brandPurple }}>
+              <ArrowRightCircleIcon />
+            </div>
+          )}
           <BoldText>{data.old_status}</BoldText>
           <Text>&nbsp;to&nbsp;</Text>
           <BoldText>{data.new_status}</BoldText>
         </Flex>
       ) : (
         <Flex>
-          <TimelineIcon icon={faSun} />
+          <div style={{ width: 24, marginRight: 8, color: colors.brandPurple }}>
+            <SunIcon />
+          </div>
           <BoldText>Added</BoldText>
           <Text>&nbsp;to sprint as&nbsp;</Text>
           <BoldText>{data.new_status}</BoldText>

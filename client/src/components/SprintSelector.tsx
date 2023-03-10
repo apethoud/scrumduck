@@ -1,12 +1,16 @@
 import { PrimaryHeader } from "./styledComponents/common";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { 
+  ChevronDownIcon 
+} from "@heroicons/react/24/outline";
+import colors from "../styling/colors";
 
 export default function SprintSelector({ selectedSprintName }) {
   return (
     <div style={{ display: "flex", alignItems: "center", marginBottom: 24 }}>
       <PrimaryHeader style={{ marginRight: 8 }}>Sprint { selectedSprintName }</PrimaryHeader>
-      <FontAwesomeIcon icon={faAngleDown} style={{ color: "#6D429B" }} />
+      <div style={{ width: 24, marginTop: 8, color: colors.brandPurple }}>
+        <ChevronDownIcon />
+      </div>
     </div>
   )
 }
