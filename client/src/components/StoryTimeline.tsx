@@ -15,12 +15,20 @@ import colors from "../styling/colors";
 dayjs.extend(utc)
 dayjs.extend(timezone)
 
+function TimelineIconWrapper({ children, iconWidth }) {
+  return (
+    <div style={{ width: iconWidth || 24, marginRight: 8, color: colors.brandPurple }}>
+      {children}
+    </div>
+  )
+}
+
 function Comment({ data }) {
   return (
     <Flex>
-      <div style={{ width: 36, marginRight: 8, color: colors.brandPurple }}>
+      <TimelineIconWrapper iconWidth={36}>
         <ChatBubbleOvalLeftEllipsisIcon />
-      </div>
+      </TimelineIconWrapper>
       <Text>"{data.comment}"</Text>
     </Flex>
   )
@@ -29,9 +37,9 @@ function Comment({ data }) {
 function BlockingComment({ data }) {
   return (
     <Flex>
-      <div style={{ width: 24, marginRight: 8, color: colors.brandPurple }}>
+      <TimelineIconWrapper>
         <XCircleIcon />
-      </div>
+      </TimelineIconWrapper>
       <BoldText>Blocked:&nbsp;</BoldText>
       <Text>"{data.comment}"</Text>
     </Flex>
@@ -41,9 +49,9 @@ function BlockingComment({ data }) {
 function UnblockingComment({ data }) {
   return (
     <Flex>
-      <div style={{ width: 24, marginRight: 8, color: colors.brandPurple }}>
+      <TimelineIconWrapper>
         <CheckCircleIcon />
-      </div>
+      </TimelineIconWrapper>
       <BoldText>Resolved:&nbsp;</BoldText>
       <Text>"{data.comment}"</Text>
     </Flex>
@@ -56,13 +64,13 @@ function StatusChange({ data }) {
       {data.old_status !== null ? (
         <Flex>
           {data.new_status === "Done" ? (
-            <div style={{ width: 24, marginRight: 8, color: colors.brandPurple }}>
+            <TimelineIconWrapper>
               <RocketLaunchIcon />
-            </div>
+            </TimelineIconWrapper>
           ) : (
-            <div style={{ width: 24, marginRight: 8, color: colors.brandPurple }}>
+            <TimelineIconWrapper>
               <ArrowRightCircleIcon />
-            </div>
+            </TimelineIconWrapper>
           )}
           <BoldText>{data.old_status}</BoldText>
           <Text>&nbsp;to&nbsp;</Text>
@@ -70,9 +78,9 @@ function StatusChange({ data }) {
         </Flex>
       ) : (
         <Flex>
-          <div style={{ width: 24, marginRight: 8, color: colors.brandPurple }}>
+          <TimelineIconWrapper>
             <SunIcon />
-          </div>
+          </TimelineIconWrapper>
           <BoldText>Added</BoldText>
           <Text>&nbsp;to sprint as&nbsp;</Text>
           <BoldText>{data.new_status}</BoldText>
