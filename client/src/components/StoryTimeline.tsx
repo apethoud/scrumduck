@@ -96,7 +96,7 @@ export default function StoryTimeline({ story }) {
       {story.timeline.map(event => (
         <Flex 
           key={event.id}
-          style={{ marginBottom: 12 }}
+          style={{ marginBottom: 4 }}
         >
           <SubText style={{ marginRight: 12, flexShrink: 0 }}>{dayjs.tz(event.date, dayjs.tz.guess()).format("MMM DD")}</SubText>
           {event.event.type === "status_change" && (
