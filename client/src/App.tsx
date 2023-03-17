@@ -11,6 +11,7 @@ import Login from './components/Login';
 import SprintView from './components/SprintView';
 import AppContainer from './components/AppContainer';
 import NotFound from './components/NotFound';
+import StoryView from './components/StoryView';
 
 function App() {
   return (
@@ -20,10 +21,11 @@ function App() {
           <Route index element={<MarketingPage />} />
           <Route path="login" element={<Login />} />
           <Route path="app" element={<AppContainer />}>
-            <Route path="sprint" element={<SprintView />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="sprint/:sprintId" element={<SprintView />} />
+            <Route path="story/:storyId" element={<StoryView />} />
           </Route>
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

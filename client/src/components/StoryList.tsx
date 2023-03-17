@@ -1,16 +1,8 @@
 import styled from 'styled-components';
 import colors from '../styling/colors';
-import { SecondaryHeader, StatusBadge, StatusDate, SubText } from './styledComponents/common';
-import dayjs from 'dayjs';
-import relativeTime from 'dayjs/plugin/relativeTime';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'
-
-dayjs.extend(relativeTime);
-
-const Flex = styled.div`
-  display: flex;
-`
+import { Flex, SecondaryHeader, SubText } from './styledComponents/common';
+import StatusRow from './StatusRow';
+import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
 
 const StyledList = styled.div`
   border-top: 1px solid ${colors.gray10};
@@ -27,8 +19,8 @@ function ListItem({ story }) {
   return (
     <div>
       <StyledListItem>
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: 16, marginRight: 8 }}>
-          <FontAwesomeIcon icon={faEllipsisVertical} style={{ fontSize: 24, color: "#bbb" }} />
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: 32, marginRight: 4, color: "#bbb" }}>
+          <EllipsisVerticalIcon />
         </div>
         <div>
           <TitleRow title={story.title} issueNumber={story.githubIssueNumber} />
@@ -36,15 +28,6 @@ function ListItem({ story }) {
         </div>
       </StyledListItem>
     </div>
-  )
-}
-
-function StatusRow({ status, statusDate }) {
-  return (
-    <Flex>
-      <StatusBadge>{status}</StatusBadge>
-      <StatusDate>for {dayjs(statusDate).fromNow(true)}</StatusDate>
-    </Flex>
   )
 }
 

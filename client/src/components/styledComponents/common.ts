@@ -2,6 +2,12 @@ import styled from 'styled-components';
 import colors from '../../styling/colors';
 import { Link as BasicLink, NavLink } from 'react-router-dom';
 
+// Utilities
+
+export const Flex = styled.div`
+display: flex;
+`
+
 // Backgrounds
 
 export const AppBackground = styled.div`
@@ -75,6 +81,14 @@ export const PrimaryHeader = styled(Text)`
 
 export const SecondaryHeader = styled(BoldText)`
   font-size: 20px;
+`
+
+export const SectionTitle = styled.div`
+  font-size: 14px;
+  font-weight: 700;
+  color: ${colors.brandPurple};
+  text-transform: uppercase;
+  letter-spacing: 2px;
 `
 
 export const Link = styled(BasicLink)`

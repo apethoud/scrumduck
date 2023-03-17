@@ -4,7 +4,9 @@ import { AppBackground } from "./styledComponents/common";
 export default function AppContainer() {
   return (
     <AppBackground>
-      <Outlet />
+      <div style={{ paddingTop: 24, paddingBottom: 48 }}>
+        <Outlet />
+      </div>
     </AppBackground>
   )
 }
