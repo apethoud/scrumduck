@@ -15,9 +15,9 @@ import colors from "../styling/colors";
 dayjs.extend(utc)
 dayjs.extend(timezone)
 
-function TimelineIconWrapper({ children, iconWidth }) {
+function TimelineIconWrapper({ children }) {
   return (
-    <div style={{ width: iconWidth || 24, marginRight: 8, color: colors.brandPurple }}>
+    <div style={{ width: 24, marginRight: 8, color: colors.brandPurple, flexShrink: 0 }}>
       {children}
     </div>
   )
@@ -26,7 +26,7 @@ function TimelineIconWrapper({ children, iconWidth }) {
 function Comment({ data }) {
   return (
     <Flex>
-      <TimelineIconWrapper iconWidth={36}>
+      <TimelineIconWrapper>
         <ChatBubbleOvalLeftEllipsisIcon />
       </TimelineIconWrapper>
       <Text>"{data.comment}"</Text>
@@ -40,8 +40,10 @@ function BlockingComment({ data }) {
       <TimelineIconWrapper>
         <XCircleIcon />
       </TimelineIconWrapper>
-      <BoldText>Blocked:&nbsp;</BoldText>
-      <Text>"{data.comment}"</Text>
+      <Text>
+        <BoldText inline>Blocked:&nbsp;</BoldText>
+        "{data.comment}"
+      </Text>
     </Flex>
   )
 }
@@ -52,8 +54,10 @@ function UnblockingComment({ data }) {
       <TimelineIconWrapper>
         <CheckCircleIcon />
       </TimelineIconWrapper>
-      <BoldText>Resolved:&nbsp;</BoldText>
-      <Text>"{data.comment}"</Text>
+      <Text>
+        <BoldText inline>Resolved:&nbsp;</BoldText>
+        "{data.comment}"
+      </Text>
     </Flex>
   )
 }
@@ -72,18 +76,22 @@ function StatusChange({ data }) {
               <ArrowRightCircleIcon />
             </TimelineIconWrapper>
           )}
-          <BoldText>{data.old_status}</BoldText>
-          <Text>&nbsp;to&nbsp;</Text>
-          <BoldText>{data.new_status}</BoldText>
+          <Text>
+            <BoldText inline>{data.old_status}</BoldText>
+            &nbsp;to&nbsp;
+            <BoldText inline>{data.new_status}</BoldText>
+          </Text>
         </Flex>
       ) : (
         <Flex>
           <TimelineIconWrapper>
             <SunIcon />
           </TimelineIconWrapper>
-          <BoldText>Added</BoldText>
-          <Text>&nbsp;to sprint as&nbsp;</Text>
-          <BoldText>{data.new_status}</BoldText>
+          <Text>
+            <BoldText inline>Added</BoldText>
+            &nbsp;to sprint as&nbsp;
+            <BoldText inline>{data.new_status}</BoldText>
+          </Text>
         </Flex>
       )}
     </>

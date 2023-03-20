@@ -63,6 +63,7 @@ export const PrimaryBox = styled(Box)`
 // Text
 
 export const Text = styled.div`
+  ${({ inline }) => inline ? `display: inline` : ``}
   font-size: 16px;
   color: ${colors.gray90};
 `

@@ -38,7 +38,7 @@ const exampleSprintData = {
           event: {
             type: "blocking_comment",
             data: {
-              comment: "Need design updates."
+              comment: "Need design updates. Need design updates. Need design updates. Need design updates. Need design updates."
             }
           }
         },
@@ -48,7 +48,7 @@ const exampleSprintData = {
           event: {
             type: "unblocking_comment",
             data: {
-              comment: "Designs are ready."
+              comment: "Designs are ready. Designs are ready. Designs are ready. Designs are ready. Designs are ready."
             }
           }
         },
@@ -84,6 +84,29 @@ const exampleSprintData = {
       status: "In Development",
       statusLastUpdated: "Feb 21 2023",
       storyText: "As a user, I want to add personal details about myself so other users can identify me.",
+      timeline: [
+        {
+          id: 1,
+          date: "2023-03-06T11:55:20",
+          event: {
+            type: "status_change",
+            data: {
+              new_status: "Sprint Ready",
+              old_status: null
+            }
+          }
+        },
+        {
+          id: 2,
+          date: "2023-03-09T11:55:20",
+          event: {
+            type: "blocking_comment",
+            data: {
+              comment: "We may need to significantly modify this user story. Putting on hold for now."
+            }
+          }
+        },
+      ],
       title: "Profile Feature",
     },
     {
@@ -93,6 +116,40 @@ const exampleSprintData = {
       status: "Done",
       statusLastUpdated: "Feb 4 2023",
       storyText: "As a user, I want to access my account securely to avoid data security issues.",
+      timeline: [
+        {
+          id: 1,
+          date: "2023-03-06T11:55:20",
+          event: {
+            type: "status_change",
+            data: {
+              new_status: "Sprint Ready",
+              old_status: null
+            }
+          }
+        },
+        {
+          id: 2,
+          date: "2023-03-09T11:55:20",
+          event: {
+            type: "comment",
+            data: {
+              comment: "Considering the updated project deadline, this is now a top priority."
+            }
+          }
+        },
+        {
+          id: 3,
+          date: "2023-03-12T15:55:20",
+          event: {
+            type: "status_change",
+            data: {
+              new_status: "In Development",
+              old_status: "Sprint Ready"
+            }
+          }
+        },
+      ],
       title: "Login Feature",
     },
   ]
