@@ -3,6 +3,7 @@ import colors from '../styling/colors';
 import { Flex, SecondaryHeader, SubText } from './styledComponents/common';
 import StatusRow from './StatusRow';
 import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
+import { Link } from 'react-router-dom';
 
 const StyledList = styled.div`
   border-top: 1px solid ${colors.gray10};
@@ -18,15 +19,17 @@ const StyledListItem = styled.div`
 function ListItem({ story }) {
   return (
     <div>
-      <StyledListItem>
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: 32, marginRight: 4, color: "#bbb" }}>
-          <EllipsisVerticalIcon />
-        </div>
-        <div>
-          <TitleRow title={story.title} issueNumber={story.githubIssueNumber} />
-          <StatusRow status={story.status} statusDate={story.statusLastUpdated} />
-        </div>
-      </StyledListItem>
+      <Link to={`/app/story/${story.id}`} style={{ textDecoration: "none" }}>
+        <StyledListItem>
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: 32, marginRight: 4, color: "#bbb" }}>
+            <EllipsisVerticalIcon />
+          </div>
+          <div>
+            <TitleRow title={story.title} issueNumber={story.githubIssueNumber} />
+            <StatusRow status={story.status} statusDate={story.statusLastUpdated} />
+          </div>
+        </StyledListItem>
+      </Link>
     </div>
   )
 }
