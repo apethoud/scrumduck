@@ -1,5 +1,5 @@
-import TextInput from "./common/TextInput";
-import { Button, Link, PatternBackground, PrimaryBox, PrimaryHeader } from "./styledComponents/common";
+import TextInput from "../components/common/TextInput";
+import { Button, Link, PatternBackground, PrimaryBox, PrimaryHeader } from "../components/styledComponents/common";
 import { useFormik } from "formik";
 import * as Yup from 'yup';
 

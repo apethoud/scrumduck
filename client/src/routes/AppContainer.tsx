@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { AppBackground } from "./styledComponents/common";
+import { AppBackground } from "../components/styledComponents/common";
 
 export default function AppContainer() {
   return (

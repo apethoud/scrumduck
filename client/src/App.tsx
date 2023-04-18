@@ -5,12 +5,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import SiteHeader from './components/SiteHeader';
-import MarketingPage from './components/MarketingPage';
-import Login from './components/Login';
-import SprintView from './components/SprintView';
-import AppContainer from './components/AppContainer';
-import NotFound from './components/NotFound';
-import StoryView from './components/StoryView';
+import MarketingPage from './routes/MarketingPage';
+import Login from './routes/Login';
+import SprintView from './routes/SprintView';
+import AppContainer from './routes/AppContainer';
+import NotFound from './routes/NotFound';
+import StoryView from './routes/StoryView';
 
 const router = createBrowserRouter([
   {

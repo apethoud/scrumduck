@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 import ExampleData from "../api/api";
 import { useEffect, useState } from "react";
-import PageSection from "./common/PageSection";
-import { Link, SecondaryHeader, Text } from "./styledComponents/common";
-import StatusRow from "./StatusRow";
-import StoryTimeline from "./StoryTimeline";
+import PageSection from "../components/common/PageSection";
+import { Link, SecondaryHeader, Text } from "../components/styledComponents/common";
+import StatusRow from "../components/StatusRow";
+import StoryTimeline from "../components/StoryTimeline";
 
 export default function StoryView() {
   const [ story, setStory ] = useState(null);
@@ -21,6 +21,7 @@ export default function StoryView() {
     <div>
       {story ? (
         <>
+          <Link to="..">Back</Link>
           <PageSection title="Basic Info">
             <SecondaryHeader style={{ marginBottom: 4 }}>{story.title}</SecondaryHeader>
             <Text style={{ marginBottom: 4 }}>{story.storyText}</Text>
