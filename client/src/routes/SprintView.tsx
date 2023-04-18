@@ -1,7 +1,7 @@
-import SprintSelector from "./SprintSelector";
-import StoryList from "./StoryList";
+import SprintSelector from "../components/SprintSelector";
+import StoryList from "../components/StoryList";
 import ExampleData from "../api/api";
-import AddNewStory from "./AddNewStory";
+import AddNewStory from "../components/AddNewStory";
 
 export default function SprintView() {
   return (
