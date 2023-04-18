@@ -99,6 +99,11 @@ export const Link = styled(BasicLink)`
   text-decoration: none;
 `
 
+export const BackLink = styled(Link)`
+  font-size: 14px;
+  font-weight: inherit;
+`
+
 // Form Elements
 
 export const Label = styled.label`
