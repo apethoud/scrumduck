@@ -5,10 +5,6 @@ import StatusRow from './StatusRow';
 import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
 import { Link } from 'react-router-dom';
 
-const StyledList = styled.div`
-  border-top: 1px solid ${colors.gray10};
-`
-
 function ListItem({ story }) {
   return (
     <div>
