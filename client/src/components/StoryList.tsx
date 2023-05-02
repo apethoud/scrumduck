@@ -1,4 +1,4 @@
-import StoryViewCard from './StoryViewCard';
+import StoryViewCard from './StoryViewCard/StoryViewCard';
 
 export default function StoryList({ stories }) {
   return (
