@@ -3,6 +3,7 @@ import { Flex, SecondaryHeader, SubText } from '../styledComponents/common';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
+import StatusBadge from "../common/StatusBadge";
 
 const StatusColorRow = styled.div`
   margin-bottom: 6px;
@@ -50,7 +51,14 @@ export default function StoryViewCard({ story }) {
         {isCardOpen && (
           <>
             <DetailSection>
-              DetailSection
+              <Flex>
+                <StatusBadge 
+                  color={story.status.color}
+                  name={story.status.name}
+                />
+                <div>{story.status.lastUpdated}</div>
+              </Flex>
+              <Link>View on Github</Link>
             </DetailSection>
             <ActionSection>
               ActionSection
