@@ -14,19 +14,18 @@ const Section = styled.div`
   padding: 12px;
   display: flex;
   justify-content: space-between;
-  background: #fff;
 `
 
 const BasicSection = styled(Section)`
-  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.8);
 `
 
 const DetailSection = styled(Section)`
-  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.9);
 `
 
 const ActionSection = styled(Section)`
-  opacity: 0.95;
+  background: rgba(255, 255, 255, 0.95);
 `
 
 export default function StoryViewCard({ story }) {
