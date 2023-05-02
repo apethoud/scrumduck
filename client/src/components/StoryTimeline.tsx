@@ -11,6 +11,7 @@ import {
   XCircleIcon 
 } from "@heroicons/react/24/outline";
 import colors from "../styling/colors";
+import { formatAsMonthDayDate } from "../utils";
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
@@ -106,7 +107,7 @@ export default function StoryTimeline({ story }) {
           key={event.id}
           style={{ marginBottom: 4 }}
         >
-          <SubText style={{ marginRight: 12, flexShrink: 0 }}>{dayjs.tz(event.date, dayjs.tz.guess()).format("MMM DD")}</SubText>
+          <SubText style={{ marginRight: 12, flexShrink: 0 }}>{formatAsMonthDayDate(event.date)}</SubText>
           {event.event.type === "status_change" && (
             <StatusChange data={event.event.data} />
           )}

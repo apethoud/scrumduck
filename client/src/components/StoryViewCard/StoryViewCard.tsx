@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 import StatusBadge from "../common/StatusBadge";
+import { formatAsRelativeDate } from "../../utils";
 
 const StatusColorRow = styled.div`
   margin-bottom: 6px;
@@ -27,6 +28,10 @@ const DetailSection = styled(Section)`
 
 const ActionSection = styled(Section)`
   background: rgba(255, 255, 255, 0.95);
+`
+
+const StatusDate = styled.div`
+  padding: 3px 8px 5px;
 `
 
 export default function StoryViewCard({ story }) {
@@ -56,7 +61,7 @@ export default function StoryViewCard({ story }) {
                   color={story.status.color}
                   name={story.status.name}
                 />
-                <div>{story.status.lastUpdated}</div>
+                <StatusDate>for {formatAsRelativeDate(story.status.lastUpdated)}</StatusDate>
               </Flex>
               <Link>View on Github</Link>
             </DetailSection>

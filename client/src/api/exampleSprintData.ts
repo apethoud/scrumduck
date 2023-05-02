@@ -11,7 +11,7 @@ const exampleSprintData = {
         id: 4,
         name: "Done",
         color: "#E3C800",
-        lastUpdated: "Feb 19 2023",
+        lastUpdated: "2023-04-29T11:55:20",
       },
       storyText: "As a user, I want to select a date for my event so I can keep track of scheduling.",
       timeline: [
@@ -89,7 +89,7 @@ const exampleSprintData = {
         id: 5,
         name: "Paused",
         color: "#E38021",
-        lastUpdated: "Feb 21 2023",
+        lastUpdated: "2023-04-22T11:55:20",
       },
       storyText: "As a user, I want to add personal details about myself so other users can identify me.",
       timeline: [
@@ -125,7 +125,7 @@ const exampleSprintData = {
         id: 2,
         name: "Progressing",
         color: "#509010",
-        lastUpdated: "Feb 4 2023",
+        lastUpdated: "2023-03-20T11:55:20",
       },
       storyText: "As a user, I want to access my account securely to avoid data security issues.",
       timeline: [
