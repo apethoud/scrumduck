@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import ExampleData from "../api/api";
+import ExampleSprintData from "../api/exampleSprintData";
 import { useEffect, useState } from "react";
 import PageSection from "../components/common/PageSection";
 import { Link, SecondaryHeader, Text } from "../components/styledComponents/common";
@@ -12,7 +12,7 @@ export default function StoryView() {
   const { storyId } = useParams();
 
   useEffect(() => {
-    const selectedStory = ExampleData.userStories.find(userStory => userStory.id === Number(storyId));
+    const selectedStory = ExampleSprintData.userStories.find(userStory => userStory.id === Number(storyId));
     if (selectedStory) {
       setStory(selectedStory);
     }

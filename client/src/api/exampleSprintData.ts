@@ -153,6 +153,6 @@ const exampleSprintData = {
       title: "Login Feature",
     },
   ]
-}
+};
 
 export default exampleSprintData;
