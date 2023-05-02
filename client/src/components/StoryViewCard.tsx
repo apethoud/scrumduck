@@ -1,6 +1,7 @@
 import StatusColorRow from "./StatusColorRow";
 import { Flex, SecondaryHeader, SubText } from './styledComponents/common';
 import { Link } from 'react-router-dom';
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 export default function StoryViewCard({ story }) {
   return (
@@ -11,7 +12,9 @@ export default function StoryViewCard({ story }) {
             <SecondaryHeader>{story.title}</SecondaryHeader>
             <SubText style={{ marginTop: 3, marginLeft: 8 }}>#{story.githubIssueNumber}</SubText>
           </Flex>
-          <div>^</div>
+          <div style={{ width: 16, marginTop: 8 }}>
+            <ChevronDownIcon />
+          </div>
         </Flex>
       </StatusColorRow>
     </Link>
