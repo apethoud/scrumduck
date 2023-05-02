@@ -6,7 +6,7 @@ import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 
 const StatusColorRow = styled.div`
   margin-bottom: 6px;
-  background: blue;
+  background: ${({ color }) => color ? color : "#fff"};
 `
 
 const Section = styled.div`
@@ -34,7 +34,7 @@ export default function StoryViewCard({ story }) {
   
   return (
     // <Link to={`/app/story/${story.id}`} style={{ textDecoration: "none" }}>
-      <StatusColorRow>
+      <StatusColorRow color={story.status.color}>
         <BasicSection onClick={() => setIsCardOpen(!isCardOpen)}>
           <Flex style={{ paddingBottom: 8 }}>
             <SecondaryHeader>{story.title}</SecondaryHeader>
