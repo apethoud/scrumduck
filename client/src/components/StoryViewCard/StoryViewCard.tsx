@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Flex, SecondaryHeader, SubText } from '../styledComponents/common';
+import { Flex, SecondaryHeader, SectionTitle, SubText, Text } from '../styledComponents/common';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
@@ -14,12 +14,12 @@ const StatusColorRow = styled.div`
 const Section = styled.div`
   margin-left: 8px;
   padding: 12px;
-  display: flex;
-  justify-content: space-between;
 `
 
 const BasicSection = styled(Section)`
   background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: space-between;
 `
 
 const DetailSection = styled(Section)`
@@ -56,14 +56,20 @@ export default function StoryViewCard({ story }) {
         {isCardOpen && (
           <>
             <DetailSection>
-              <Flex>
-                <StatusBadge 
-                  color={story.status.color}
-                  name={story.status.name}
-                />
-                <StatusDate>for {formatAsRelativeDate(story.status.lastUpdated)}</StatusDate>
+              <Flex style={{ marginBottom: 18 }}>
+                <Flex>
+                  <StatusBadge 
+                    color={story.status.color}
+                    name={story.status.name}
+                  />
+                  <StatusDate>for {formatAsRelativeDate(story.status.lastUpdated)}</StatusDate>
+                </Flex>
+                <Link>View on Github</Link>
               </Flex>
-              <Link>View on Github</Link>
+              <div style={{ marginBottom: 18 }}>
+                <SectionTitle>Latest Update</SectionTitle>
+                <Text>{story.latestUpdate}</Text>
+              </div>
             </DetailSection>
             <ActionSection>
               ActionSection

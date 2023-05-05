@@ -89,7 +89,7 @@ export const SectionTitle = styled.div`
   font-weight: 700;
   color: ${colors.brandPurple};
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
 `
 
 export const Link = styled(BasicLink)`
