@@ -7,8 +7,12 @@ dayjs.extend(utc)
 dayjs.extend(relativeTime)
 dayjs.extend(timezone)
 
-export const formatAsRelativeDate = date => {
-  return dayjs.tz(date, dayjs.tz.guess()).fromNow(true);
+export const formatAsRelativeDateForXUnits = date => {
+  return `for ${dayjs.tz(date, dayjs.tz.guess()).fromNow(true)}`;
+}
+
+export const formatAsRelativeDateXUnitsAgo = date => {
+  return dayjs.tz(date, dayjs.tz.guess()).fromNow();
 }
 
 export const formatAsMonthDayDate = date => {

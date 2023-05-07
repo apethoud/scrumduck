@@ -5,7 +5,10 @@ const exampleSprintData = {
   userStories: [
     {
       id: 1,
-      latestUpdate: "Feature is complete. Moving to QA.",
+      latestUpdate: {
+        text: "Feature is complete. Moving to QA.",
+        updatedAt: "2023-03-14T15:55:20",
+      },
       githubIssueNumber: 24,
       githubLinkUrl: "http://github.com",
       status: {
@@ -84,7 +87,10 @@ const exampleSprintData = {
     },
     {
       id: 2,
-      latestUpdate: "Client is reconsidering this feature.",
+      latestUpdate: {
+        text: "Client is reconsidering this feature.",
+        updatedAt: "2023-03-09T11:55:20",
+      },
       githubIssueNumber: 27,
       githubLinkUrl: "http://github.com",
       status: {
@@ -121,7 +127,10 @@ const exampleSprintData = {
     },
     {
       id: 3,
-      latestUpdate: "2FA is nearly complete.",
+      latestUpdate: {
+        text: "2FA is nearly complete.",
+        updatedAt: "2023-03-12T15:55:20",
+      },
       githubIssueNumber: 5,
       githubLinkUrl: "http://github.com",
       status: {

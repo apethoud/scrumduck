@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 import StatusBadge from "../common/StatusBadge";
-import { formatAsRelativeDate } from "../../utils";
+import { formatAsRelativeDateForXUnits, formatAsRelativeDateXUnitsAgo } from "../../utils";
 
 const StatusColorRow = styled.div`
   margin-bottom: 6px;
@@ -56,19 +56,24 @@ export default function StoryViewCard({ story }) {
         {isCardOpen && (
           <>
             <DetailSection>
-              <Flex style={{ marginBottom: 18 }}>
+              <Flex style={{ marginBottom: 18, justifyContent: "space-between" }}>
                 <Flex>
                   <StatusBadge 
                     color={story.status.color}
                     name={story.status.name}
                   />
-                  <StatusDate>for {formatAsRelativeDate(story.status.lastUpdated)}</StatusDate>
+                  <StatusDate>{formatAsRelativeDateForXUnits(story.status.lastUpdated)}</StatusDate>
                 </Flex>
                 <Link>View on Github</Link>
               </Flex>
               <div style={{ marginBottom: 18 }}>
-                <SectionTitle>Latest Update</SectionTitle>
-                <Text>{story.latestUpdate}</Text>
+                <Flex>
+                  <SectionTitle>Latest Update</SectionTitle>
+                  <Text style={{ fontSize: 14, marginLeft: 8, fontStyle: "italic" }}>
+                    {formatAsRelativeDateXUnitsAgo(story.latestUpdate.updatedAt)}
+                  </Text>
+                </Flex>
+                <Text>{story.latestUpdate.text}</Text>
               </div>
             </DetailSection>
             <ActionSection>
