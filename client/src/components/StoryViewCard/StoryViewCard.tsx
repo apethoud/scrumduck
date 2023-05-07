@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Flex, SecondaryHeader, SectionTitle, SubText, Text } from '../styledComponents/common';
+import { Button, Flex, SecondaryHeader, SectionTitle, SubText, Text } from '../styledComponents/common';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
@@ -77,7 +77,9 @@ export default function StoryViewCard({ story }) {
               </div>
             </DetailSection>
             <ActionSection>
-              ActionSection
+              <Button primary series>Update Status</Button>
+              <Button primary series>Add Comment</Button>
+              <Button primary series>Mark as Blocked</Button>
             </ActionSection>
           </>
         )}
