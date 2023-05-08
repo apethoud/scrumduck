@@ -1,49 +1,17 @@
-import styled from 'styled-components';
 import { Flex } from '../styledComponents/common';
 import first from 'lodash/first';
 import last from 'lodash/last';
 import { formatAsDateByTokenString } from '../../utils';
+import {
+  Day,
+  DayBox,
+  EndDate,
+  Month,
+  StartDate,
+  StatusSegment
+} from './styled';
 
 export default function StatusOverTime({ days }) {
-  const DayBox = styled.div`
-    display: flex;
-    margin-right: 4px;
-    height: 24px;
-    width: 24px;
-  `;
-
-  const StatusSegment = styled.div`
-    height: 100%;
-    ${({ percentage, color }) => (percentage && color) ? `
-      width: ${percentage}%;
-      background-color: ${color};
-      ` : null
-    };
-  `
-
-  const StartDate = styled.div`
-    padding-top: 8px;
-    padding-left: 2px;
-    border-left: 1px solid black;
-  `
-
-  const EndDate = styled.div`
-    padding-top: 8px;
-    padding-right: 2px;
-    border-right: 1px solid black;
-  `
-
-  const Month = styled.div`
-    font-size: 12px;
-    text-transform: uppercase;
-  `
-
-  const Day = styled.div`
-    font-size: 20px;
-    ${({ textAlign }) => textAlign ? `
-      text-align: ${textAlign};
-    ` : null}
-  `
 
   console.log("days is: ", days);
 
