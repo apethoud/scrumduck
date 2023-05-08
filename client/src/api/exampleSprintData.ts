@@ -21,9 +21,11 @@ const exampleSprintData = {
       },
       statusOverTime: [
         {
+          id: 1,
           date: "2023-03-06",
           statuses: [
             {
+              id: 1,
               status: {
                 id: 1,
                 name: "Not Progressing",
@@ -34,9 +36,11 @@ const exampleSprintData = {
           ]
         },
         {
+          id: 2,
           date: "2023-03-07",
           statuses: [
             {
+              id: 1,
               status: {
                 id: 1,
                 name: "Not Progressing",
@@ -47,9 +51,11 @@ const exampleSprintData = {
           ]
         },
         {
+          id: 3,
           date: "2023-03-08",
           statuses: [
             {
+              id: 1,
               status: {
                 id: 1,
                 name: "Not Progressing",
@@ -60,9 +66,11 @@ const exampleSprintData = {
           ]
         },
         {
+          id: 4,
           date: "2023-03-09",
           statuses: [
             {
+              id: 1,
               status: {
                 id: 1,
                 name: "Not Progressing",
@@ -73,9 +81,11 @@ const exampleSprintData = {
           ]
         },
         {
+          id: 5,
           date: "2023-03-10",
           statuses: [
             {
+              id: 1,
               status: {
                 id: 2,
                 name: "Progressing",
@@ -86,9 +96,11 @@ const exampleSprintData = {
           ]
         },
         {
+          id: 6,
           date: "2023-03-11",
           statuses: [
             {
+              id: 1,
               status: {
                 id: 2,
                 name: "Progressing",
@@ -97,6 +109,7 @@ const exampleSprintData = {
               percentage: 30
             },
             {
+              id: 2,
               status: {
                 id: 6,
                 name: "Blocked",
@@ -107,9 +120,11 @@ const exampleSprintData = {
           ]
         },
         {
+          id: 7,
           date: "2023-03-12",
           statuses: [
             {
+              id: 1,
               status: {
                 id: 6,
                 name: "Blocked",
@@ -118,6 +133,7 @@ const exampleSprintData = {
               percentage: 10
             },
             {
+              id: 2,
               status: {
                 id: 2,
                 name: "Progressing",
@@ -126,6 +142,7 @@ const exampleSprintData = {
               percentage: 50
             },
             {
+              id: 3,
               status: {
                 id: 3,
                 name: "Needs Review",
@@ -136,9 +153,11 @@ const exampleSprintData = {
           ]
         },
         {
+          id: 8,
           date: "2023-03-13",
           statuses: [
             {
+              id: 1,
               status: {
                 id: 3,
                 name: "Needs Review",
@@ -147,69 +166,84 @@ const exampleSprintData = {
               percentage: 25
             },
             {
+              id: 2,
               status: null,
               percentage: 75
             },
           ]
         },
         {
+          id: 9,
           date: "2023-03-14",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 10,
           date: "2023-03-15",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 11,
           date: "2023-03-16",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 12,
           date: "2023-03-17",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 13,
           date: "2023-03-18",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 14,
           date: "2023-03-19",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 15,
           date: "2023-03-20",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
@@ -300,135 +334,165 @@ const exampleSprintData = {
       },
       statusOverTime: [
         {
+          id: 1,
           date: "2023-03-06",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 2,
           date: "2023-03-07",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 3,
           date: "2023-03-08",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 4,
           date: "2023-03-09",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 5,
           date: "2023-03-10",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 6,
           date: "2023-03-11",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 7,
           date: "2023-03-12",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 8,
           date: "2023-03-13",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 9,
           date: "2023-03-14",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 10,
           date: "2023-03-15",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 11,
           date: "2023-03-16",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 12,
           date: "2023-03-17",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 13,
           date: "2023-03-18",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 14,
           date: "2023-03-19",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 15,
           date: "2023-03-20",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
@@ -477,135 +541,165 @@ const exampleSprintData = {
       },
       statusOverTime: [
         {
+          id: 1,
           date: "2023-03-06",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 2,
           date: "2023-03-07",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 3,
           date: "2023-03-08",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 4,
           date: "2023-03-09",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 5,
           date: "2023-03-10",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 6,
           date: "2023-03-11",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 7,
           date: "2023-03-12",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 8,
           date: "2023-03-13",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 9,
           date: "2023-03-14",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 10,
           date: "2023-03-15",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 11,
           date: "2023-03-16",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 12,
           date: "2023-03-17",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 13,
           date: "2023-03-18",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 14,
           date: "2023-03-19",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },
           ]
         },
         {
+          id: 15,
           date: "2023-03-20",
           statuses: [
             {
+              id: 1,
               status: null,
               percentage: 100
             },

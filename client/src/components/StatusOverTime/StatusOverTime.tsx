@@ -19,11 +19,12 @@ export default function StatusOverTime({ days }) {
     <div>
       <Flex>
         {days.map(day => (
-          <DayBox>
+          <DayBox key={day.id}>
             {day.statuses.map(increment => (
               <StatusSegment 
                 percentage={increment.percentage}
                 color={increment.status ? increment.status.color : "#ebebeb"}
+                key={increment.id}
               />
             ))}
           </DayBox>
