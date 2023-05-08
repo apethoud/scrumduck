@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Flex } from './styledComponents/common';
 import first from 'lodash/first';
 import last from 'lodash/last';
+import { formatAsDateByTokenString } from '../utils';
 
 export default function StatusOverTime({ days }) {
   const DayBox = styled.div`
@@ -21,11 +22,27 @@ export default function StatusOverTime({ days }) {
   `
 
   const StartDate = styled.div`
+    padding-top: 8px;
+    padding-left: 2px;
     border-left: 1px solid black;
   `
 
   const EndDate = styled.div`
+    padding-top: 8px;
+    padding-right: 2px;
     border-right: 1px solid black;
+  `
+
+  const Month = styled.div`
+    font-size: 12px;
+    text-transform: uppercase;
+  `
+
+  const Day = styled.div`
+    font-size: 20px;
+    ${({ textAlign }) => textAlign ? `
+      text-align: ${textAlign};
+    ` : null}
   `
 
   console.log("days is: ", days);
@@ -45,8 +62,14 @@ export default function StatusOverTime({ days }) {
         ))}
       </Flex>
       <Flex style={{ justifyContent: "space-between", marginTop: 8 }}>
-        <StartDate>{first(days).date}</StartDate>
-        <EndDate>{last(days).date}</EndDate>
+        <StartDate>
+          <Month>{formatAsDateByTokenString(first(days).date, "MMM")}</Month>
+          <Day textAlign={"left"}>{formatAsDateByTokenString(first(days).date, "DD")}</Day>
+        </StartDate>
+        <EndDate>
+          <Month>{formatAsDateByTokenString(last(days).date, "MMM")}</Month>
+          <Day textAlign={"right"}>{formatAsDateByTokenString(last(days).date, "DD")}</Day>
+        </EndDate>
       </Flex>
     </div>
   )

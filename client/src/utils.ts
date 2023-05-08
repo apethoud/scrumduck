@@ -18,3 +18,7 @@ export const formatAsRelativeDateXUnitsAgo = date => {
 export const formatAsMonthDayDate = date => {
   return dayjs.tz(date, dayjs.tz.guess()).format("MMM DD");
 }
+
+export const formatAsDateByTokenString = (date, tokenString) => {
+  return dayjs.tz(date, dayjs.tz.guess()).format(tokenString);
+}
