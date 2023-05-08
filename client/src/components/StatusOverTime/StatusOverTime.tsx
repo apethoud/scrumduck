@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { Flex } from './styledComponents/common';
+import { Flex } from '../styledComponents/common';
 import first from 'lodash/first';
 import last from 'lodash/last';
-import { formatAsDateByTokenString } from '../utils';
+import { formatAsDateByTokenString } from '../../utils';
 
 export default function StatusOverTime({ days }) {
   const DayBox = styled.div`

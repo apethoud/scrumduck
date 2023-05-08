@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 import StatusBadge from "../common/StatusBadge";
 import { formatAsRelativeDateForXUnits, formatAsRelativeDateXUnitsAgo } from "../../utils";
-import StatusOverTime from "../StatusOverTime";
+import StatusOverTime from "../StatusOverTime/StatusOverTime";
 import {
   StatusColorRow,
   BasicSection,
