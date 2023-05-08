@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 import StatusBadge from "../common/StatusBadge";
 import { formatAsRelativeDateForXUnits, formatAsRelativeDateXUnitsAgo } from "../../utils";
+import StatusOverTime from "../StatusOverTime";
 
 const StatusColorRow = styled.div`
   margin-bottom: 6px;
@@ -74,6 +75,22 @@ export default function StoryViewCard({ story }) {
                   </Text>
                 </Flex>
                 <Text>{story.latestUpdate.text}</Text>
+              </div>
+              <div style={{ marginBottom: 18 }}>
+                <SectionTitle>Status Over Time</SectionTitle>
+                <div style={{ 
+                  display: "inline-block",
+                  marginTop: 4,
+                  borderColor: story.status.color, 
+                  borderWidth: 1, 
+                  borderStyle: "solid", 
+                  background: "#fff",
+                  padding: 6 
+                }}>
+                  <StatusOverTime
+                    days={story.statusOverTime}
+                  />
+                </div>
               </div>
             </DetailSection>
             <ActionSection>

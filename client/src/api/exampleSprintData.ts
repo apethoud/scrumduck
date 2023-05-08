@@ -1,7 +1,9 @@
 const exampleSprintData = {
   id: 1,
+  endDate: "2023-03-20",
   name: "1",
   projectId: 1,
+  startDate: "2023-03-06",
   userStories: [
     {
       id: 1,
@@ -17,6 +19,203 @@ const exampleSprintData = {
         color: "#E3C800",
         lastUpdated: "2023-04-29T11:55:20",
       },
+      statusOverTime: [
+        {
+          date: "2023-03-06",
+          statuses: [
+            {
+              status: {
+                id: 1,
+                name: "Not Progressing",
+                color: "#767676"
+              },
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-07",
+          statuses: [
+            {
+              status: {
+                id: 1,
+                name: "Not Progressing",
+                color: "#767676"
+              },
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-08",
+          statuses: [
+            {
+              status: {
+                id: 1,
+                name: "Not Progressing",
+                color: "#767676"
+              },
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-09",
+          statuses: [
+            {
+              status: {
+                id: 1,
+                name: "Not Progressing",
+                color: "#767676"
+              },
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-10",
+          statuses: [
+            {
+              status: {
+                id: 2,
+                name: "Progressing",
+                color: "#509010"
+              },
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-11",
+          statuses: [
+            {
+              status: {
+                id: 2,
+                name: "Progressing",
+                color: "#509010"
+              },
+              percentage: 30
+            },
+            {
+              status: {
+                id: 6,
+                name: "Blocked",
+                color: "#AF2023"
+              },
+              percentage: 70
+            },
+          ]
+        },
+        {
+          date: "2023-03-12",
+          statuses: [
+            {
+              status: {
+                id: 6,
+                name: "Blocked",
+                color: "#AF2023"
+              },
+              percentage: 10
+            },
+            {
+              status: {
+                id: 2,
+                name: "Progressing",
+                color: "#509010"
+              },
+              percentage: 50
+            },
+            {
+              status: {
+                id: 3,
+                name: "Needs Review",
+                color: "#1766A9"
+              },
+              percentage: 40
+            },
+          ]
+        },
+        {
+          date: "2023-03-13",
+          statuses: [
+            {
+              status: {
+                id: 3,
+                name: "Needs Review",
+                color: "#1766A9"
+              },
+              percentage: 25
+            },
+            {
+              status: null,
+              percentage: 75
+            },
+          ]
+        },
+        {
+          date: "2023-03-14",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-15",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-16",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-17",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-18",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-19",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-20",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+      ],
       storyText: "As a user, I want to select a date for my event so I can keep track of scheduling.",
       timeline: [
         {
@@ -99,6 +298,143 @@ const exampleSprintData = {
         color: "#E38021",
         lastUpdated: "2023-04-22T11:55:20",
       },
+      statusOverTime: [
+        {
+          date: "2023-03-06",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-07",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-08",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-09",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-10",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-11",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-12",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-13",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-14",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-15",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-16",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-17",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-18",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-19",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-20",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+      ],
       storyText: "As a user, I want to add personal details about myself so other users can identify me.",
       timeline: [
         {
@@ -139,6 +475,143 @@ const exampleSprintData = {
         color: "#509010",
         lastUpdated: "2023-03-20T11:55:20",
       },
+      statusOverTime: [
+        {
+          date: "2023-03-06",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-07",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-08",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-09",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-10",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-11",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-12",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-13",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-14",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-15",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-16",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-17",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-18",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-19",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+        {
+          date: "2023-03-20",
+          statuses: [
+            {
+              status: null,
+              percentage: 100
+            },
+          ]
+        },
+      ],
       storyText: "As a user, I want to access my account securely to avoid data security issues.",
       timeline: [
         {

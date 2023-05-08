@@ -85,6 +85,7 @@ export const SecondaryHeader = styled(BoldText)`
 `
 
 export const SectionTitle = styled.div`
+  margin-bottom: 4px;
   font-size: 14px;
   font-weight: 700;
   color: ${colors.brandPurple};
