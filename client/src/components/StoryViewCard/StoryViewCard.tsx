@@ -1,39 +1,17 @@
 import { useState } from "react";
 import { Button, Flex, SecondaryHeader, SectionTitle, SubText, Text } from '../styledComponents/common';
-import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 import StatusBadge from "../common/StatusBadge";
 import { formatAsRelativeDateForXUnits, formatAsRelativeDateXUnitsAgo } from "../../utils";
 import StatusOverTime from "../StatusOverTime";
-
-const StatusColorRow = styled.div`
-  margin-bottom: 6px;
-  background: ${({ color }) => color ? color : "#fff"};
-`
-
-const Section = styled.div`
-  margin-left: 8px;
-  padding: 12px;
-`
-
-const BasicSection = styled(Section)`
-  background: rgba(255, 255, 255, 0.8);
-  display: flex;
-  justify-content: space-between;
-`
-
-const DetailSection = styled(Section)`
-  background: rgba(255, 255, 255, 0.9);
-`
-
-const ActionSection = styled(Section)`
-  background: rgba(255, 255, 255, 0.95);
-`
-
-const StatusDate = styled.div`
-  padding: 3px 8px 5px;
-`
+import {
+  StatusColorRow,
+  BasicSection,
+  DetailSection,
+  ActionSection,
+  StatusDate
+} from './styled';
 
 export default function StoryViewCard({ story }) {
   const [isCardOpen, setIsCardOpen] = useState(false);
