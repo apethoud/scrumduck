@@ -12,7 +12,6 @@ display: flex;
 
 export const AppBackground = styled.div`
   background: ${colors.white};
-  padding: 16px;
 `
 
 export const PatternBackground = styled.div`

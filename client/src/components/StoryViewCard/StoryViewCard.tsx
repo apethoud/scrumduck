@@ -13,7 +13,7 @@ import {
   StatusDate
 } from './styled';
 
-export default function StoryViewCard({ story }) {
+export default function StoryViewCard({ setSelectedStoryId, story }) {
   const [isCardOpen, setIsCardOpen] = useState(false);
   
   return (
@@ -43,7 +43,7 @@ export default function StoryViewCard({ story }) {
                   />
                   <StatusDate>{formatAsRelativeDateForXUnits(story.status.lastUpdated)}</StatusDate>
                 </Flex>
-                <Link>View on Github</Link>
+                <Button onClick={() => setSelectedStoryId(story.id)}>Show Full Story</Button>
               </Flex>
               <div style={{ marginBottom: 18 }}>
                 <Flex>
