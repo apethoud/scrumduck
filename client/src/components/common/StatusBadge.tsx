@@ -7,10 +7,10 @@ const Background = styled.div`
   border-radius: 4px;
 `
 
-export default function StatusBadge({ color, name }) {
+export default function StatusBadge({ status }) {
   return (
-    <Background color={color}>
-      <BoldText>{name}</BoldText>
+    <Background color={status.color}>
+      <BoldText>{status.name}</BoldText>
     </Background>
   )
 }

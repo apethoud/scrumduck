@@ -10,8 +10,7 @@ export default function StatusRow({ status }) {
   return (
     <Flex>
       <StatusBadge
-        color={status.color}
-        name={status.name}
+        status={status}
       />
       <StatusDate>{formatAsRelativeDateForXUnits(status.lastUpdated)}</StatusDate>
     </Flex>

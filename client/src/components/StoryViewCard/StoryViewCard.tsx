@@ -38,8 +38,7 @@ export default function StoryViewCard({ setSelectedStoryId, story }) {
               <Flex style={{ marginBottom: 18, justifyContent: "space-between" }}>
                 <Flex>
                   <StatusBadge 
-                    color={story.status.color}
-                    name={story.status.name}
+                    status={story.status}
                   />
                   <StatusDate>{formatAsRelativeDateForXUnits(story.status.lastUpdated)}</StatusDate>
                 </Flex>
