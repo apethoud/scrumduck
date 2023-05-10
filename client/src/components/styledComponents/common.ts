@@ -85,11 +85,12 @@ export const SecondaryHeader = styled(BoldText)`
 `
 
 export const SectionTitle = styled.div`
+  margin-bottom: 4px;
   font-size: 14px;
   font-weight: 700;
   color: ${colors.brandPurple};
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
 `
 
 export const Link = styled(BasicLink)`
@@ -123,7 +124,7 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   border-radius: 8px;
-  padding: 8px;
+  padding: 7px 12px 9px;
   font-size: 16px;
   font-weight: 700;
   font-family: "Assistant", sans-serif;
@@ -137,6 +138,11 @@ export const Button = styled.button`
       background: ${colors.white};
       color: ${colors.brandPurple};
       border: 1px solid ${colors.brandPurple};
+      `
+  };
+  ${({ series }) => series 
+    && `
+      margin: 6px 12px 6px 0px;
       `
   };
 `

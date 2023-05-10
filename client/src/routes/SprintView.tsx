@@ -1,13 +1,13 @@
 import SprintSelector from "../components/SprintSelector";
 import StoryList from "../components/StoryList";
-import ExampleData from "../api/api";
+import ExampleSprintData from "../api/exampleSprintData";
 import AddNewStory from "../components/AddNewStory";
 
 export default function SprintView() {
   return (
     <>
-      <SprintSelector selectedSprintName={ExampleData.name} />
-      <StoryList stories={ExampleData.userStories} />
+      <SprintSelector selectedSprintName={ExampleSprintData.name} />
+      <StoryList stories={ExampleSprintData.userStories} />
       <AddNewStory />
     </>
   )
