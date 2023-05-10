@@ -83,9 +83,15 @@ function StatusChange({ data }) {
             </TimelineIconWrapper>
           )}
           <Text>
-            <BoldText inline>{data.old_status}</BoldText>
+          <StatusBadge 
+            status={getStatusObjectByName(data.old_status)}
+            inline
+          />
             &nbsp;to&nbsp;
-            <BoldText inline>{data.new_status}</BoldText>
+            <StatusBadge 
+              status={getStatusObjectByName(data.new_status)}
+              inline
+            />
           </Text>
         </Flex>
       ) : (
