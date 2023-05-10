@@ -1,7 +1,4 @@
 import { BoldText, Flex, SubText, Text } from "./styledComponents/common"
-import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-import timezone from "dayjs/plugin/timezone";
 import { 
   ArrowRightCircleIcon,
   ChatBubbleOvalLeftEllipsisIcon, 
@@ -12,9 +9,6 @@ import {
 } from "@heroicons/react/24/outline";
 import colors from "../styling/colors";
 import { formatAsMonthDayDate } from "../utils";
-
-dayjs.extend(utc)
-dayjs.extend(timezone)
 
 function TimelineIconWrapper({ children }) {
   return (
