@@ -13,6 +13,7 @@ export default function SprintView() {
       <div style={{ flexGrow: 1, padding: 32 }}>
         <SprintSelector selectedSprintName={ExampleSprintData.name} />
         <StoryList 
+          selectedStoryId={selectedStoryId}
           setSelectedStoryId={setSelectedStoryId}
           stories={ExampleSprintData.userStories} 
         />
