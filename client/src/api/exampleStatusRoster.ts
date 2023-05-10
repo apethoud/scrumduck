@@ -35,3 +35,5 @@ const exampleStatusRoster = [
     color: "#D6D6D6"
   },
 ]
+
+export default exampleStatusRoster;

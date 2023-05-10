@@ -9,6 +9,13 @@ import {
 } from "@heroicons/react/24/outline";
 import colors from "../styling/colors";
 import { formatAsMonthDayDate } from "../utils";
+import exampleStatusRoster from "../api/exampleStatusRoster";
+import { find } from 'lodash'
+import StatusBadge from './common/StatusBadge';
+
+function getStatusObjectByName(name) {
+  return find(exampleStatusRoster, { name });
+}
 
 function TimelineIconWrapper({ children }) {
   return (
@@ -36,7 +43,11 @@ function BlockingComment({ data }) {
         <XCircleIcon />
       </TimelineIconWrapper>
       <Text>
-        <BoldText inline>Blocked:&nbsp;</BoldText>
+        <StatusBadge 
+          status={getStatusObjectByName("Blocked")}
+          inline
+        />
+        <BoldText inline>: </BoldText>
         "{data.comment}"
       </Text>
     </Flex>
