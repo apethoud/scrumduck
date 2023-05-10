@@ -1,14 +1,13 @@
-import { useParams } from "react-router-dom";
 import ExampleSprintData from "../../api/exampleSprintData";
 import { useEffect, useState } from "react";
 import PageSection from "../../components/common/PageSection";
 import { Link, SecondaryHeader, Text } from "../../components/styledComponents/common";
 import StatusRow from "../../components/StatusRow";
 import StoryTimeline from "../../components/StoryTimeline";
-import BackLink from "../../components/common/BackLink";
 import { SidePane } from "./styled";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 
-export default function StoryView({ storyId }) {
+export default function StoryView({ setSelectedStoryId, storyId }) {
   const [ story, setStory ] = useState(null);
 
   useEffect(() => {
@@ -22,6 +21,10 @@ export default function StoryView({ storyId }) {
     <>
       {story ? (
         <SidePane>
+          <XMarkIcon 
+            onClick={() => setSelectedStoryId(null)}
+            style={{ width: 24, alignSelf: "end" }} 
+          />
           <PageSection title="Basic Info">
             <SecondaryHeader style={{ marginBottom: 4 }}>{story.title}</SecondaryHeader>
             <Text style={{ marginBottom: 4 }}>{story.storyText}</Text>

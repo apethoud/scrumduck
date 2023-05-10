@@ -24,7 +24,7 @@ export default function StoryViewCard({ setSelectedStoryId, story }) {
             <SecondaryHeader>{story.title}</SecondaryHeader>
             <SubText style={{ marginTop: 3, marginLeft: 8 }}>#{story.githubIssueNumber}</SubText>
           </Flex>
-          <div style={{ width: 16, marginTop: 8 }}>
+          <div style={{ width: 24, marginTop: 8 }}>
             {isCardOpen ? (
               <ChevronUpIcon />
             ) : (

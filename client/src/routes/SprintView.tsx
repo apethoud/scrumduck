@@ -19,7 +19,10 @@ export default function SprintView() {
         <AddNewStory />
       </div>
       {selectedStoryId && (
-        <StoryView storyId={selectedStoryId} />
+        <StoryView 
+          setSelectedStoryId={setSelectedStoryId}
+          storyId={selectedStoryId} 
+        />
       )}
     </Flex>
   )
