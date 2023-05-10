@@ -12,7 +12,7 @@ import {
   StatusDate
 } from './styled';
 
-export default function StoryViewCard({ selectedStoryId, setSelectedStoryId, story }) {
+export default function SprintViewCard({ selectedStoryId, setSelectedStoryId, story }) {
   const [isCardOpen, setIsCardOpen] = useState(false);
   
   return (

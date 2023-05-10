@@ -1,10 +1,10 @@
-import StoryViewCard from './StoryViewCard/StoryViewCard';
+import SprintViewCard from './SprintViewCard/SprintViewCard';
 
 export default function StoryList({ stories, selectedStoryId, setSelectedStoryId }) {
   return (
     <>
       {stories && stories.map(story => (
-        <StoryViewCard 
+        <SprintViewCard 
           key={story.id}
           selectedStoryId={selectedStoryId}
           setSelectedStoryId={setSelectedStoryId}
