@@ -4,7 +4,7 @@ import ExampleSprintData from "../api/exampleSprintData";
 import AddNewStory from "../components/AddNewStory";
 import { Flex } from "../components/styledComponents/common";
 import { useState } from "react";
-import StoryView from "./StoryView/StoryView";
+import StoryView from "../components/StoryView/StoryView";
 
 export default function SprintView() {
   const [selectedStoryId, setSelectedStoryId] = useState(null);

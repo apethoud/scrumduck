@@ -1,9 +1,9 @@
 import ExampleSprintData from "../../api/exampleSprintData";
 import { useEffect, useState } from "react";
-import PageSection from "../../components/common/PageSection";
-import { Link, SecondaryHeader, Text } from "../../components/styledComponents/common";
-import StatusRow from "../../components/StatusRow";
-import StoryTimeline from "../../components/StoryTimeline";
+import PageSection from "../common/PageSection";
+import { Link, SecondaryHeader, Text } from "../styledComponents/common";
+import StatusRow from "../StatusRow";
+import StoryTimeline from "../StoryTimeline";
 import { SidePane } from "./styled";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
