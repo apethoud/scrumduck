@@ -16,7 +16,7 @@ export default function SprintViewCard({ selectedStoryId, setSelectedStoryId, st
   const [isCardOpen, setIsCardOpen] = useState(false);
   
   return (
-    <StatusColorRow color={story.status.color}>
+    <StatusColorRow color={story.status.darkColor}>
       <BasicSection onClick={() => setIsCardOpen(!isCardOpen)}>
         <Flex style={{ paddingBottom: 8 }}>
           <SecondaryHeader>{story.title}</SecondaryHeader>

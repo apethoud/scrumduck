@@ -11,7 +11,7 @@ const Background = styled.div`
 export default function StatusBadge({ status, inline }) {
   return (
     <Background 
-      color={status.color}
+      color={status.lightColor}
       inline={inline}
     >
       <BoldText>{status.name}</BoldText>

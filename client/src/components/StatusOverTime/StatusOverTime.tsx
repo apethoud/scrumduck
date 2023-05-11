@@ -23,7 +23,7 @@ export default function StatusOverTime({ days }) {
             {day.statuses.map(increment => (
               <StatusSegment 
                 percentage={increment.percentage}
-                color={increment.status ? increment.status.color : "#ebebeb"}
+                color={increment.status ? increment.status.darkColor : "#ebebeb"}
                 key={increment.id}
               />
             ))}
