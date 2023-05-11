@@ -33,7 +33,7 @@ export default function SprintViewCard({ selectedStoryId, setSelectedStoryId, st
       {isCardOpen && (
         <>
           <DetailSection>
-            <Flex style={{ marginBottom: 18, justifyContent: "space-between" }}>
+            <Flex style={{ marginBottom: 18, justifyContent: "space-between", alignItems: "baseline" }}>
               <Flex>
                 <StatusBadge 
                   status={story.status}

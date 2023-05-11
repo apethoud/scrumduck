@@ -4,7 +4,7 @@ import StatusBadge from './common/StatusBadge';
 
 export default function StatusRow({ status }) {
   return (
-    <Flex>
+    <Flex style={{ alignItems: "baseline" }}>
       <StatusBadge
         status={status}
       />
