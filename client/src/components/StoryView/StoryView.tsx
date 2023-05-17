@@ -1,10 +1,9 @@
 import ExampleSprintData from "../../api/exampleSprintData";
 import { useEffect, useState } from "react";
 import PageSection from "../common/PageSection";
-import { Link, SecondaryHeader, Text } from "../styledComponents/common";
+import { Flex, Link, SecondaryHeader, Text } from "../styledComponents/common";
 import StatusRow from "../StatusRow";
 import StoryTimeline from "../StoryTimeline";
-import { SidePane } from "./styled";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function StoryView({ setSelectedStoryId, storyId }) {
@@ -18,9 +17,9 @@ export default function StoryView({ setSelectedStoryId, storyId }) {
   }, [storyId])
 
   return (
-    <>
+    <Flex style={{ flexDirection: "column" }}>
       {story ? (
-        <SidePane>
+        <>
           <XMarkIcon 
             onClick={() => setSelectedStoryId(null)}
             style={{ width: 24, alignSelf: "end" }} 
@@ -36,10 +35,10 @@ export default function StoryView({ setSelectedStoryId, storyId }) {
           <PageSection title="Timeline">
             <StoryTimeline story={story} />
           </PageSection>
-        </SidePane>
+        </>
       ) : (
         <div>Loading...</div>
       )}
-    </>
+    </Flex>
   )
 }

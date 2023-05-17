@@ -5,10 +5,15 @@ import {
   Text
 } from "./styledComponents/common";
 import { Outlet } from "react-router-dom";
+import styled from 'styled-components';
+
+const OutletContainer = styled.div`
+  flex: 1 1 auto;
+`
 
 export default function SiteHeader() {
   return (
-    <>
+    <div>
       <StyledSiteHeader>
         <NavItem to="/">
           <SiteLogo>Scrumduck</SiteLogo>
@@ -17,7 +22,9 @@ export default function SiteHeader() {
           <Text>Login</Text>
         </NavItem>
       </StyledSiteHeader>
-      <Outlet />
-    </>
+      <OutletContainer>
+        <Outlet />
+      </OutletContainer>
+    </div>
   )
 }

@@ -24,6 +24,7 @@ export const PatternBackground = styled.div`
 
 export const SiteHeader = styled.div`
   display: flex;
+  flex: 0 0 content;
   justify-content: space-between;
   border-top: 4px solid ${colors.brandPurple};
   background: ${colors.white};
