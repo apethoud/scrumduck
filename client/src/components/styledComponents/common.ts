@@ -12,7 +12,6 @@ display: flex;
 
 export const AppBackground = styled.div`
   background: ${colors.white};
-  padding: 16px;
 `
 
 export const PatternBackground = styled.div`
@@ -25,6 +24,7 @@ export const PatternBackground = styled.div`
 
 export const SiteHeader = styled.div`
   display: flex;
+  flex: 0 0 content;
   justify-content: space-between;
   border-top: 4px solid ${colors.brandPurple};
   background: ${colors.white};
@@ -70,6 +70,7 @@ export const Text = styled.div`
 
 export const BoldText = styled(Text)`
   font-weight: 700;
+  ${({ inline }) => inline && "display: inline;"}
 `
 
 export const SubText = styled(Text)`
@@ -148,15 +149,6 @@ export const Button = styled.button`
 `
 
 // Unique Elements
-
-export const StatusBadge = styled.div`
-  padding: 6px 10px 8px 10px;
-  border-radius: 8px;
-  background-color: ${colors.greenLight};
-  font-size: 16px;
-  font-weight: 700;
-  color: ${colors.greenDark};
-`
 
 export const StatusDate = styled(SubText)`
   padding: 6px 10px 8px 10px;

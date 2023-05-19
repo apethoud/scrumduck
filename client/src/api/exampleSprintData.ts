@@ -16,7 +16,8 @@ const exampleSprintData = {
       status: {
         id: 4,
         name: "Done",
-        color: "#E3C800",
+        darkColor: "#E3C800",
+        lightColor: "#F6E146",
         lastUpdated: "2023-04-29T11:55:20",
       },
       statusOverTime: [
@@ -29,7 +30,8 @@ const exampleSprintData = {
               status: {
                 id: 1,
                 name: "Not Progressing",
-                color: "#767676"
+                darkColor: "#767676",
+                lightColor: "#C0BFBF",
               },
               percentage: 100
             },
@@ -44,7 +46,8 @@ const exampleSprintData = {
               status: {
                 id: 1,
                 name: "Not Progressing",
-                color: "#767676"
+                darkColor: "#767676",
+                lightColor: "#C0BFBF",
               },
               percentage: 100
             },
@@ -59,7 +62,8 @@ const exampleSprintData = {
               status: {
                 id: 1,
                 name: "Not Progressing",
-                color: "#767676"
+                darkColor: "#767676",
+                lightColor: "#C0BFBF",
               },
               percentage: 100
             },
@@ -74,7 +78,8 @@ const exampleSprintData = {
               status: {
                 id: 1,
                 name: "Not Progressing",
-                color: "#767676"
+                darkColor: "#767676",
+                lightColor: "#C0BFBF",
               },
               percentage: 100
             },
@@ -89,7 +94,8 @@ const exampleSprintData = {
               status: {
                 id: 2,
                 name: "Progressing",
-                color: "#509010"
+                darkColor: "#509010",
+                lightColor: "#9BCA6D",
               },
               percentage: 100
             },
@@ -104,7 +110,8 @@ const exampleSprintData = {
               status: {
                 id: 2,
                 name: "Progressing",
-                color: "#509010"
+                darkColor: "#509010",
+                lightColor: "#9BCA6D",
               },
               percentage: 30
             },
@@ -113,7 +120,8 @@ const exampleSprintData = {
               status: {
                 id: 6,
                 name: "Blocked",
-                color: "#AF2023"
+                darkColor: "#AF2023",
+                lightColor: "#F0A5A7",
               },
               percentage: 70
             },
@@ -128,7 +136,8 @@ const exampleSprintData = {
               status: {
                 id: 6,
                 name: "Blocked",
-                color: "#AF2023"
+                darkColor: "#AF2023",
+                lightColor: "#F0A5A7",
               },
               percentage: 10
             },
@@ -137,7 +146,8 @@ const exampleSprintData = {
               status: {
                 id: 2,
                 name: "Progressing",
-                color: "#509010"
+                darkColor: "#509010",
+                lightColor: "#9BCA6D",
               },
               percentage: 50
             },
@@ -146,7 +156,8 @@ const exampleSprintData = {
               status: {
                 id: 3,
                 name: "Needs Review",
-                color: "#1766A9"
+                darkColor: "#1766A9",
+                lightColor: "#9EC7E9",
               },
               percentage: 40
             },
@@ -161,7 +172,8 @@ const exampleSprintData = {
               status: {
                 id: 3,
                 name: "Needs Review",
-                color: "#1766A9"
+                darkColor: "#1766A9",
+                lightColor: "#9EC7E9",
               },
               percentage: 25
             },
@@ -329,7 +341,8 @@ const exampleSprintData = {
       status: {
         id: 5,
         name: "Paused",
-        color: "#E38021",
+        darkColor: "#E38021",
+        lightColor: "#F4B579",
         lastUpdated: "2023-04-22T11:55:20",
       },
       statusOverTime: [
@@ -536,7 +549,8 @@ const exampleSprintData = {
       status: {
         id: 2,
         name: "Progressing",
-        color: "#509010",
+        darkColor: "#509010",
+        lightColor: "#9BCA6D",
         lastUpdated: "2023-03-20T11:55:20",
       },
       statusOverTime: [

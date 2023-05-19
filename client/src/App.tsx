@@ -7,10 +7,9 @@ import {
 import SiteHeader from './components/SiteHeader';
 import MarketingPage from './routes/MarketingPage';
 import Login from './routes/Login';
-import SprintView from './routes/SprintView';
+import SprintView from './routes/SprintView/SprintView';
 import AppContainer from './routes/AppContainer';
 import NotFound from './routes/NotFound';
-import StoryView from './routes/StoryView';
 
 const router = createBrowserRouter([
   {
@@ -33,10 +32,6 @@ const router = createBrowserRouter([
           {
             path: "sprint/:sprintId",
             element: <SprintView />
-          },
-          {
-            path: "story/:storyId",
-            element: <StoryView />
           }
         ]
       }

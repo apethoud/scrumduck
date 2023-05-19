@@ -1,7 +1,4 @@
 import { BoldText, Flex, SubText, Text } from "./styledComponents/common"
-import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-import timezone from "dayjs/plugin/timezone";
 import { 
   ArrowRightCircleIcon,
   ChatBubbleOvalLeftEllipsisIcon, 
@@ -12,9 +9,13 @@ import {
 } from "@heroicons/react/24/outline";
 import colors from "../styling/colors";
 import { formatAsMonthDayDate } from "../utils";
+import exampleStatusRoster from "../api/exampleStatusRoster";
+import { find } from 'lodash'
+import StatusBadge from './common/StatusBadge';
 
-dayjs.extend(utc)
-dayjs.extend(timezone)
+function getStatusObjectByName(name) {
+  return find(exampleStatusRoster, { name });
+}
 
 function TimelineIconWrapper({ children }) {
   return (
@@ -42,7 +43,11 @@ function BlockingComment({ data }) {
         <XCircleIcon />
       </TimelineIconWrapper>
       <Text>
-        <BoldText inline>Blocked:&nbsp;</BoldText>
+        <StatusBadge 
+          status={getStatusObjectByName("Blocked")}
+          inline
+        />
+        <BoldText inline>: </BoldText>
         "{data.comment}"
       </Text>
     </Flex>
@@ -78,9 +83,15 @@ function StatusChange({ data }) {
             </TimelineIconWrapper>
           )}
           <Text>
-            <BoldText inline>{data.old_status}</BoldText>
+          <StatusBadge 
+            status={getStatusObjectByName(data.old_status)}
+            inline
+          />
             &nbsp;to&nbsp;
-            <BoldText inline>{data.new_status}</BoldText>
+            <StatusBadge 
+              status={getStatusObjectByName(data.new_status)}
+              inline
+            />
           </Text>
         </Flex>
       ) : (
